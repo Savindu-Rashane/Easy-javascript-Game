@@ -274,16 +274,16 @@ var Game = {
                 window.requestAnimationFrame(Pong.loop);
             }
             
-            if (key.keyCode === 38) Pong.player.move = DIRECTION.UP;
-            if (key.keyCode === 40) Pong.player.move = DIRECTION.DOWN;
+            if (key.keyCode === 87) Pong.player.move = DIRECTION.UP; //w
+            if (key.keyCode === 83) Pong.player.move = DIRECTION.DOWN; //s
 
-            if (key.keyCode === 87) Pong.ai.move = DIRECTION.UP; // 'W' key for AI UP
-            if (key.keyCode === 83) Pong.ai.move = DIRECTION.DOWN; // 'S' key for AI DOWN
+            if (key.keyCode === 38) Pong.ai.move = DIRECTION.UP; 
+            if (key.keyCode === 40) Pong.ai.move = DIRECTION.DOWN; 
         });
         
         document.addEventListener('keyup', function (key) {
-            if (key.keyCode === 38 || key.keyCode === 40) Pong.player.move = DIRECTION.IDLE;
-            if (key.keyCode === 87 || key.keyCode === 83) Pong.ai.move = DIRECTION.IDLE;
+            if (key.keyCode === 87 || key.keyCode === 83) Pong.player.move = DIRECTION.IDLE;
+            if (key.keyCode === 38 || key.keyCode === 40) Pong.ai.move = DIRECTION.IDLE;
         });
     },
 
