@@ -194,7 +194,7 @@ var Game = {
             this.canvas.height
         );
         
-        this.context.fillStyle = '#ffffff';
+        this.context.fillStyle = '';
         
         this.context.fillRect(
             this.player.x,
